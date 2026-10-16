@@ -1,7 +1,9 @@
 from django.db import models
 import uuid
+from users.models import Profile
 # Create your models here.
 class Project(models.Model):
+    owner = models.ForeignKey(Profile, null=True, blank=True, on_delete=models.SET_NULL)
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     title = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
