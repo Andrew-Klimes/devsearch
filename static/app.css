@@ -355,7 +355,7 @@ img {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;  
+  gap: 1.5rem;
 }
 
 .devInfo {
@@ -853,11 +853,17 @@ img {
 ========================*/
 
 .alert {
+  z-index: 99999;
+
   position: fixed;
   left: 50%;
   top: 120px;
   transform: translate(-50%, -50%);
-
-
-  z-index: 99999;
+  z-index: 9999;
+ 
+  padding: 1.5rem 2.5rem;
+  border-radius: 3px;
+  border: 1px solid var(--color-white-light);
+  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
